@@ -5,15 +5,15 @@ async function seed() {
   console.time()
   const oneImage = image => image[Math.floor(images.length * Math.random())];
   function recursion(n) {
-    if (n === 10) {
+    if (n === 100) {
       console.log('10M data seed time:')
       console.timeEnd()
       return;
     }
     let imageArr = [];
-    for (let i = 1; i <= 1000000; i++) {
+    for (let i = 1; i <= 100000; i++) {
       imageArr.push({
-        _id: n * 1000000 + i,
+        _id: n * 100000 + i,
         exterior: oneImage(images),
         img1: oneImage(images),
         img2: oneImage(images),
