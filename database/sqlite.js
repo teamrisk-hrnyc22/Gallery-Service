@@ -11,6 +11,7 @@ const db = new sqlite3.Database('./database.sqlite', err => {
 
 const randomImage = array => array[Math.floor(array.length * Math.random())];
 
+
 db.serialize(() => {
   db.run(`DROP TABLE IF EXISTS gallery`);
   db.run(`

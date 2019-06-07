@@ -5,17 +5,21 @@
   "main": "index.js",
   "scripts": {
     "start": "nodemon server/server.js",
+    "postgres": "node databasePostgres/postgres.js",
+    "mongo": "node databaseMongo/seed.js",
     "dev": "parcel client/src/index.html -d client/dist",
     "build": "parcel build client/src/index.html -d client/dist",
     "test": "jest"
   },
   "keywords": [],
-  "author": "",
+  "author": "Brian Oh",
   "license": "ISC",
   "dependencies": {
     "axios": "^0.18.0",
     "cors": "^2.8.5",
     "express": "^4.16.4",
+    "mongoose": "^5.5.13",
+    "pg": "^7.11.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-images": "^0.5.19",

@@ -2,7 +2,8 @@ const express = require('express');
 const path = require('path');
 const cors = require('cors');
 const morgan = require('morgan');
-const { getDataFromDatabase, getListingByID } = require('../database/utils.js');
+// const { getDataFromDatabase, getListingByID } = require('../database/utils.js');]
+const { getDataFromDatabase, getListingByID } = require('../databaseMongo/helper.js');
 
 const app = express();
 
@@ -16,13 +17,21 @@ app.get('/:number', (req, res) => {
 
 app.get('/api', (req, res) => {
   getDataFromDatabase((err, results) => {
-    res.send(results);
+    if (err) {
+      console.log(err)
+    } else {
+      res.send([results]);
+    }
   });
 });
 
 app.get('/api/:id', (req, res) => {
   getListingByID(req.params.id, (err, results) => {
-    res.send(results);
+    if (err) {
+      console.log(err)
+    } else {
+      res.send([results]);
+    }
   });
 });
 
