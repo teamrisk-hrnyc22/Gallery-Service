@@ -2,10 +2,12 @@ const { images } = require('./image.js');
 const { Gallery } = require('./mongo.js');
 
 async function seed() {
+  console.time()
   const oneImage = image => image[Math.floor(images.length * Math.random())];
   function recursion(n) {
     if (n === 10) {
-      console.log('Seed 10M data success!')
+      console.log('10M data seed time:')
+      console.timeEnd()
       return;
     }
     let imageArr = [];
