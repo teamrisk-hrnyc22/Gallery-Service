@@ -1,12 +1,10 @@
 const { Gallery } = require('./mongo.js');
 
 const getDataFromDatabase = (callback) => {
-  console.time()
   Gallery.find()
   .then((data) => {
     callback(null, data)
   })
-  .then(console.timeEnd())
   .catch(err => {
     console.log(err);
   })
