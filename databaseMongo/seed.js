@@ -5,7 +5,6 @@ async function seed() {
   console.time()
   const oneImage = image => image[Math.floor(images.length * Math.random())];
   function recursion(n) {
-    console.time()
     if (n === 100) {
       console.log('10M data seed time:')
       console.timeEnd()
@@ -33,7 +32,6 @@ async function seed() {
       if (err) {
         console.log(err);
       } else {
-        console.log("Time it took to seed 100,000 Data: ", console.timeEnd())
         recursion(n + 1);
       }
     });
