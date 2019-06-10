@@ -18,9 +18,9 @@ app.get('/:number', (req, res) => {
 app.get('/api', (req, res) => {
   getDataFromDatabase((err, results) => {
     if (err) {
-      console.log(err)
+      console.log(err);
     } else {
-      res.send([results]);
+      res.send(results);
     }
   });
 });
@@ -28,9 +28,9 @@ app.get('/api', (req, res) => {
 app.get('/api/:id', (req, res) => {
   getListingByID(req.params.id, (err, results) => {
     if (err) {
-      console.log(err)
+      console.log(err);
     } else {
-      res.send([results]);
+      res.send(results);
     }
   });
 });

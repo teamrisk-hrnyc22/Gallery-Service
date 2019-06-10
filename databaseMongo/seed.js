@@ -2,12 +2,11 @@ const { images } = require('./image.js');
 const { Gallery } = require('./mongo.js');
 
 async function seed() {
-  console.time()
+  console.time('💾10M Data Seed Time');
   const oneImage = image => image[Math.floor(images.length * Math.random())];
-  function recursion(n) {
+  function seedData(n) {
     if (n === 100) {
-      console.log('10M data seed time:')
-      console.timeEnd()
+      console.timeEnd('💾10M Data Seed Time');
       return;
     }
     let imageArr = [];
@@ -32,11 +31,11 @@ async function seed() {
       if (err) {
         console.log(err);
       } else {
-        recursion(n + 1);
+        seedData(n + 1);
       }
     });
   }
-  recursion(0);
+  seedData(0);
 }
 
 seed();
