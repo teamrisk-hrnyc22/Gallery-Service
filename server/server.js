@@ -5,6 +5,7 @@ const morgan = require('morgan');
 // const { getDataFromDatabase, getListingByID } = require('../database/utils.js');]
 const { getDataFromDatabase, getListingByID } = require('../databaseMongo/helper.js');
 const PORT = process.env.PORT || 3000;
+require('newrelic');
 
 const app = express();
 
