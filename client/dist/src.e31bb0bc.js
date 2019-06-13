@@ -34688,7 +34688,7 @@ function (_Component) {
 
       var path = this.state.path;
 
-      _axios.default.get("http://localhost:3000/api/".concat(path)).then(function (_ref) {
+      _axios.default.get("/api/".concat(path)).then(function (_ref) {
         var data = _ref.data;
         return Object.entries(data[0]).filter(function (listing) {
           return listing[0] !== '_id';
@@ -34838,7 +34838,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "55810" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "60272" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
