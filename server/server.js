@@ -37,7 +37,7 @@ app.get('/api/:id', (req, res) => {
 });
 
 app.get('/loaderio-d36124ebe9adf0b368663c1ae8f15d1f', (req, res) => {
-  res.send('../loaderio-d36124ebe9adf0b368663c1ae8f15d1f.txt');
+  res.sendFile(path.join(__dirname, '../loaderio-d36124ebe9adf0b368663c1ae8f15d1f.txt'));
 });
 
 app.listen(PORT, () => {
