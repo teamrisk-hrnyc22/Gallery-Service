@@ -2,4 +2,6 @@ node_modules/
 database.sqlite/
 .cache/
 .DS_Store/
-newrelic.js
+
+test.yml
+.prettierrc
