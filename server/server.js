@@ -37,6 +37,9 @@ app.get('/api/:id', (req, res) => {
   });
 });
 
+app.get('/loaderio-d36124ebe9adf0b368663c1ae8f15d1f', (req, res) => {
+  res.send('loaderio-d36124ebe9adf0b368663c1ae8f15d1f');
+});
 
 app.listen(PORT, () => {
   console.log(`Connected to Express server on Port: ${PORT}`);
