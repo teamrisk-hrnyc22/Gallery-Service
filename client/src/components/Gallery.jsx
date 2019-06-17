@@ -24,7 +24,7 @@ class Gallery extends Component {
   componentDidMount() {
     const { path } = this.state;
     axios
-      .get(window.location.href.includes("localhost") ? `/api/${path}` : `http://18.216.12.255:3000/api/${path}`)
+      .get(window.location.href.includes("localhost") ? `/api/${path}` : `http://3.130.78.108:3000/api/${path}`)
       .then(({ data }) => {
         return Object.entries(data[0])
           .filter(listing => listing[0] !== '_id')

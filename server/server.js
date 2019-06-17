@@ -2,7 +2,6 @@ const express = require('express');
 const path = require('path');
 const cors = require('cors');
 const morgan = require('morgan');
-// const { getDataFromDatabase, getListingByID } = require('../database/utils.js');]
 const { getDataFromDatabase, getListingByID } = require('../databaseMongo/helper.js');
 const PORT = process.env.PORT || 3000;
 
