@@ -27,25 +27,25 @@ app.get('/api', (req, res) => {
   });
 });
 
-// app.get('/api/:id', (req, res) => {
-//   getListingByID(req.params.id, (err, results) => {
-//     if (err) {
-//       console.log(err);
-//     } else {
-//       res.send(results);
-//     }
-//   });
-// });
-
 app.get('/api/:id', (req, res) => {
-  getListingByIDCached(redis, req.params.id, (err, results) => {
+  getListingByID(req.params.id, (err, results) => {
     if (err) {
       console.log(err);
     } else {
-      res.send([results]);
+      res.send(results);
     }
   });
 });
+
+// app.get('/api/:id', (req, res) => {
+//   getListingByIDCached(redis, req.params.id, (err, results) => {
+//     if (err) {
+//       console.log(err);
+//     } else {
+//       res.send([results]);
+//     }
+//   });
+// });
 
 
 app.get('/loaderio-e90baeaf1b349dc0b7678c75a10d7e3f', (req, res) => {
